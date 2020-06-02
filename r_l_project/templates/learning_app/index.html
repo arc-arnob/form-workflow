@@ -1,0 +1,14 @@
+{% extends 'learning_app/base.html' %}
+{% load static %}
+
+{% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+            {% if user.is_authenticated %}
+                <h1>Welcome to Index Page! {{ user.username }}</h1>
+            {% else %}
+                <h2>Welcome to the site!</h2>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
